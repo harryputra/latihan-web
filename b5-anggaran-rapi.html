@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">
+  <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+  <head>
+    <!-- Awal bagian head (keterangan dokumen) -->
+    <meta charset="UTF-8" />
+    <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+    <title>Anggaran vs Realisasi per Bidang</title>
+    <!-- Judul tab -->
+    <style>
+      /* Awal aturan CSS */
+    </style>
+    <!-- Akhir CSS -->
+  </head>
+  <!-- Akhir head -->
+  <body>
+    <!-- Awal body -->
+    <h1>Anggaran Biaya Operasional 2026</h1>
+    <!-- Judul -->
+    <p class="ket">
+      Realisasi s.d. Oktober 2026 (Rp juta). Merah: serapan di atas 90%.
+    </p>
+    <!-- Keterangan satuan dan arti warna merah -->
+    <table>
+      <!-- Awal tabel -->
+      <tr>
+        <th>Bidang</th>
+        <th>Anggaran</th>
+        <th>Realisasi</th>
+        <th>Sisa</th>
+        <th>Serapan</th>
+      </tr>
+      <!-- Lima kolom termasuk Serapan -->
+      <tr>
+        <td>Keuangan &amp; Umum</td>
+        <td class="angka">180</td>
+        <td class="angka">142</td>
+        <td class="angka">38</td>
+        <td class="angka">78,9%</td>
+      </tr>
+      <!-- 142 / 180 = 78,9% -->
+      <tr>
+        <td>SDM</td>
+        <td class="angka">120</td>
+        <td class="angka">101</td>
+        <td class="angka">19</td>
+        <td class="angka">84,2%</td>
+      </tr>
+      <!-- 101 / 120 = 84,2% -->
+      <tr class="tinggi">
+        <td>Pelayanan Pelanggan</td>
+        <td class="angka">240</td>
+        <td class="angka">226</td>
+        <td class="angka">14</td>
+        <td class="angka">94,2%</td>
+      </tr>
+      <!-- 226 / 240 = 94,2% -> diberi class tinggi -->
+      <tr>
+        <td>Jaringan</td>
+        <td class="angka">310</td>
+        <td class="angka">248</td>
+        <td class="angka">62</td>
+        <td class="angka">80,0%</td>
+      </tr>
+      <!-- 248 / 310 = 80,0% -->
+      <tr>
+        <td>Konstruksi</td>
+        <td class="angka">260</td>
+        <td class="angka">209</td>
+        <td class="angka">51</td>
+        <td class="angka">80,4%</td>
+      </tr>
+      <!-- 209 / 260 = 80,4% -->
+      <tr class="total">
+        <td>Total</td>
+        <td class="angka">1.110</td>
+        <td class="angka">926</td>
+        <td class="angka">184</td>
+        <td class="angka">83,4%</td>
+      </tr>
+      <!-- Total 926 / 1.110 = 83,4% -->
+    </table>
+    <!-- Akhir tabel -->
+  </body>
+  <!-- Akhir body -->
+</html>
+<!-- Akhir dokumen -->
