@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">
+  <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+  <head>
+    <!-- Awal bagian head (keterangan dokumen) -->
+    <meta charset="UTF-8" />
+    <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Wajib untuk tampilan ponsel -->
+    <title>Ringkasan Anggaran</title>
+    <!-- Judul tab -->
+    <style>
+      /* Awal CSS */
+      body {
+        font-family: Arial, sans-serif;
+        color: #1f2a44;
+        margin: 24px;
+        background: #eef3f9;
+      } /* Latar halaman */
+      h1 {
+        color: #0b4a8b;
+        font-size: 22px;
+      } /* Gaya judul */
+      .baris {
+        display: flex;
+        gap: 16px;
+      } /* Kartu berjajar */
+      .kartu {
+        flex: 1;
+        background: white;
+        border-radius: 10px;
+        padding: 16px; /* Lebar kartu sama rata */
+        border-top: 5px solid #0b4a8b;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      } /* Aksen biru dan bayangan */
+    </style>
+    <!-- Akhir CSS -->
+  </head>
+  <!-- Akhir head -->
+  <body>
+    <!-- Awal body -->
+    <h1>Ringkasan Anggaran Biaya Operasional 2026</h1>
+    <!-- Judul -->
+    <div class="baris">
+      <!-- Wadah kartu -->
+      <div class="kartu">
+        <div class="label">Anggaran</div>
+        <div class="nilai">Rp 1.110 jt</div>
+      </div>
+      <!-- Kartu anggaran -->
+      <div class="kartu">
+        <div class="label">Realisasi s.d. Okt</div>
+        <div class="nilai">Rp 926 jt</div>
+      </div>
+      <!-- Kartu realisasi -->
+      <div class="kartu">
+        <div class="label">Sisa anggaran</div>
+        <div class="nilai">Rp 184 jt</div>
+      </div>
+      <!-- Kartu sisa -->
+      <div class="kartu serapan">
+        <div class="label">Serapan</div>
+        <div class="nilai">83,4%</div>
+        <!-- Kartu keempat dengan dua class -->
+        <div class="ket">Target akhir Oktober 83%</div>
+      </div>
+      <!-- Keterangan target -->
+    </div>
+    <!-- Akhir wadah -->
+  </body>
+  <!-- Akhir body -->
+</html>
+<!-- Akhir dokumen -->
