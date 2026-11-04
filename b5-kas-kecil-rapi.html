@@ -23,6 +23,26 @@
         border-collapse: collapse;
         width: 100%;
       } /* Garis tabel disatukan; tabel selebar halaman */
+      th {
+        background-color: #0b4a8b;
+        color: white;
+        padding: 8px;
+        text-align: left;
+      } /* Judul kolom: latar biru tua, teks putih */
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #d6e0ec;
+      } /* Ruang dalam sel + garis tipis di bawah */
+      tr:nth-child(even) td {
+        background-color: #d4d114;
+      } /* Baris genap diberi latar lembut */
+      .angka {
+        text-align: right;
+      } /* Class angka: rata kanan */
+      .total td {
+        font-weight: bold;
+        border-top: 2px solid #0b4a8b;
+      } /* Class total: tebal + garis atas */
     </style>
     <!-- Akhir CSS -->
   </head>
