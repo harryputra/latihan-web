@@ -1,0 +1,58 @@
+<!doctype html>
+<!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">
+  <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+  <head>
+    <!-- Awal bagian head (keterangan dokumen) -->
+    <meta charset="UTF-8" />
+    <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+    <title>Kalkulator Sisa Anggaran</title>
+    <!-- Judul tab -->
+    <style>
+      /* Awal CSS */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+        color: #1f2a44;
+      } /* Gaya halaman */
+      input {
+        padding: 6px;
+        width: 180px;
+      }
+      button {
+        padding: 7px 16px;
+      } /* Gaya isian dan tombol */
+      #hasil {
+        margin-top: 16px;
+        padding: 12px;
+        background: #e2f0fd;
+        border-radius: 8px;
+      } /* Kotak hasil biru muda */
+    </style>
+    <!-- Akhir CSS -->
+  </head>
+  <!-- Akhir head -->
+  <body>
+    <!-- Awal body -->
+    <h1>Kalkulator Sisa Anggaran</h1>
+    <!-- Judul -->
+    <p>Anggaran (Rp juta) <input type="number" id="anggaran" value="240" /></p>
+    <!-- Isian angka id=anggaran, nilai awal 240 -->
+    <p>
+      Realisasi (Rp juta) <input type="number" id="realisasi" value="226" />
+    </p>
+    <!-- Isian id=realisasi, nilai awal 226 -->
+    <button onclick="hitung()">Hitung</button>
+    <!-- Klik -> jalankan fungsi hitung() -->
+    <div id="hasil">Hasil akan tampil di sini.</div>
+    <!-- Kotak tempat hasil ditulis -->
+
+    <script>
+      // Awal JavaScript
+      
+    </script>
+    <!-- Akhir JavaScript -->
+  </body>
+  <!-- Akhir body -->
+</html>
+<!-- Akhir dokumen -->
