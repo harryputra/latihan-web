@@ -1,0 +1,88 @@
+<!doctype html>
+<!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">
+  <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+  <head>
+    <!-- Awal bagian head (keterangan dokumen) -->
+    <meta charset="UTF-8" />
+    <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+    <title>Rekap Kas Kecil</title>
+    <!-- Judul tab -->
+    <style>
+      /* Awal aturan CSS */
+      body {
+        font-family: Arial, sans-serif;
+        color: #1f2a44;
+        margin: 24px;
+      } /* Huruf, warna teks, jarak tepi halaman */
+      h1 {
+        color: #0b4a8b;
+        font-size: 22px;
+      } /* Judul biru tua 22 piksel */
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      } /* Garis tabel disatukan; tabel selebar halaman */
+    </style>
+    <!-- Akhir CSS -->
+  </head>
+  <!-- Akhir head -->
+  <body>
+    <!-- Awal body -->
+    <h1>Rekap Kas Kecil Minggu I November 2026</h1>
+    <!-- Judul rekap -->
+    <table>
+      <!-- Awal tabel (tanpa border=1) -->
+      <tr>
+        <th>Tanggal</th>
+        <th>No. Bukti</th>
+        <th>Uraian</th>
+        <th class="angka">Jumlah (Rp)</th>
+      </tr>
+      <!-- Judul kolom; kolom jumlah ikut rata kanan -->
+      <tr>
+        <td>03-11-2026</td>
+        <td>KK-031</td>
+        <td>Pembelian ATK</td>
+        <td class="angka">450.000</td>
+      </tr>
+      <!-- class=angka pada sel jumlah -->
+      <tr>
+        <td>03-11-2026</td>
+        <td>KK-032</td>
+        <td>Konsumsi rapat koordinasi</td>
+        <td class="angka">600.000</td>
+      </tr>
+      <!-- Transaksi KK-032 -->
+      <tr>
+        <td>04-11-2026</td>
+        <td>KK-033</td>
+        <td>BBM kendaraan dinas</td>
+        <td class="angka">350.000</td>
+      </tr>
+      <!-- Transaksi KK-033 -->
+      <tr>
+        <td>05-11-2026</td>
+        <td>KK-034</td>
+        <td>Fotokopi dan jilid laporan</td>
+        <td class="angka">125.000</td>
+      </tr>
+      <!-- Transaksi KK-034 -->
+      <tr>
+        <td>06-11-2026</td>
+        <td>KK-035</td>
+        <td>Sarung tangan dan helm K3</td>
+        <td class="angka">875.000</td>
+      </tr>
+      <!-- Transaksi KK-035 -->
+      <tr class="total">
+        <td colspan="3">Total</td>
+        <td class="angka">2.400.000</td>
+      </tr>
+      <!-- Baris total memakai class total -->
+    </table>
+    <!-- Akhir tabel -->
+  </body>
+  <!-- Akhir body -->
+</html>
+<!-- Akhir dokumen -->
