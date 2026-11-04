@@ -1,0 +1,30 @@
+<!DOCTYPE html>                                               <!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">                                              <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+<head>                                                        <!-- Awal bagian head (keterangan dokumen) -->
+  <meta charset="UTF-8">                                      <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+  <title>Peminjaman Ruang Rapat</title>                       <!-- Judul tab -->
+</head>                                                       <!-- Akhir head -->
+<body>                                                        <!-- Awal body -->
+  <h1>Formulir Peminjaman Ruang Rapat</h1>                    <!-- Judul formulir -->
+  <form>                                                      <!-- Awal formulir -->
+    <fieldset>                                                <!-- fieldset = kotak pengelompok isian -->
+      <legend>Pemohon</legend>                                <!-- legend = judul kotak -->
+      <label for="nama">Nama</label>                          <!-- Label nama -->
+      <input type="text" id="nama" name="nama" required>      <!-- Isian nama, wajib -->
+      <label for="bidang">Bidang</label>                      <!-- Label bidang -->
+      <select id="bidang" name="bidang">                      <!-- Daftar pilihan bidang -->
+        <option>Keuangan &amp; Umum</option><option>SDM</option><option>Jaringan</option>  <!-- Tiga pilihan bidang -->
+      </select>                                               <!-- Akhir pilihan -->
+    </fieldset>                                               <!-- Akhir kelompok Pemohon -->
+    <fieldset>                                                <!-- Kelompok kedua -->
+      <legend>Jadwal</legend>                                 <!-- Judul kelompok Jadwal -->
+      <label for="tgl">Tanggal</label> <input type="date" id="tgl" name="tanggal" required>  <!-- Isian tanggal dari kalender, wajib -->
+      <label for="jam">Jam mulai</label> <input type="time" id="jam" name="jam">  <!-- type=time untuk jam -->
+      <label for="peserta">Peserta</label> <input type="number" id="peserta" name="peserta" min="2" max="30">  <!-- Jumlah peserta dibatasi 2 sampai 30 -->
+    </fieldset>                                               <!-- Akhir kelompok Jadwal -->
+    <p><input type="checkbox" id="konsumsi" name="konsumsi">  <!-- Kotak centang ya/tidak -->
+       <label for="konsumsi">Perlu konsumsi rapat</label></p>  <!-- Label terhubung: teks ikut bisa diklik -->
+    <button type="submit">Kirim</button>                      <!-- Tombol kirim -->
+  </form>                                                     <!-- Akhir formulir -->
+</body>                                                       <!-- Akhir body -->
+</html>                                                       <!-- Akhir dokumen -->
