@@ -1,0 +1,25 @@
+<!DOCTYPE html>                                               <!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">                                              <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+<head>                                                        <!-- Awal bagian head (keterangan dokumen) -->
+  <meta charset="UTF-8">                                      <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+  <title>Formulir Pengajuan Kas Kecil</title>                 <!-- Judul tab -->
+</head>                                                       <!-- Akhir head -->
+<body>                                                        <!-- Awal body -->
+  <h1>Formulir Pengajuan Kas Kecil</h1>                       <!-- Judul formulir -->
+  <form>                                                      <!-- form membungkus semua isian dan tombol -->
+    <p><label for="tgl">Tanggal</label><br>                   <!-- label for=tgl terhubung ke isian id=tgl -->
+       <input type="date" id="tgl" name="tanggal" required></p>  <!-- type=date: pilih dari kalender; required = wajib -->
+    <p><label for="bidang">Bidang</label><br>                 <!-- Label pilihan bidang -->
+       <select id="bidang" name="bidang">                     <!-- select = daftar pilihan -->
+         <option>Keuangan &amp; Umum</option>                 <!-- option = satu pilihan -->
+         <option>SDM</option>                                 <!-- Pilihan SDM -->
+         <option>Pelayanan Pelanggan</option>                 <!-- Pilihan Pelayanan Pelanggan -->
+       </select></p>                                          <!-- Akhir daftar pilihan -->
+    <p><label for="uraian">Uraian keperluan</label><br>       <!-- Label uraian -->
+       <input type="text" id="uraian" name="uraian" size="40" required></p>  <!-- Isian teks bebas selebar 40 karakter, wajib -->
+    <p><label for="jumlah">Jumlah (Rp)</label><br>            <!-- Label jumlah -->
+       <input type="number" id="jumlah" name="jumlah" min="1000" step="1000" required></p>  <!-- Hanya angka; minimal 1000, kelipatan 1000 -->
+    <button type="submit">Ajukan</button>                     <!-- Tombol kirim; isian wajib diperiksa dulu -->
+  </form>                                                     <!-- Akhir formulir -->
+</body>                                                       <!-- Akhir body -->
+</html>                                                       <!-- Akhir dokumen -->
