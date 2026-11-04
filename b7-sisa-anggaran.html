@@ -49,7 +49,19 @@
 
     <script>
       // Awal JavaScript
-      
+      function hitung() {
+        // Fungsi bernama hitung
+        const dt_anggaran = Number(document.getElementById("anggaran").value); // Ambil isian lalu ubah teks menjadi angka
+        const dt_realisasi = Number(document.getElementById("realisasi").value); // Sama untuk realisasi
+        const sisa = dt_anggaran - dt_realisasi; // Rumus sisa
+        const serapan = (dt_realisasi / dt_anggaran) * 100; // Rumus serapan (persen)
+        document.getElementById("hasil").textContent = // Tulis ke kotak hasil...
+          "Sisa anggaran Rp " +
+          sisa +
+          " juta, serapan " +
+          serapan.toFixed(1) +
+          "%"; // ...toFixed(1) = satu angka desimal
+      } // Akhir fungsi
     </script>
     <!-- Akhir JavaScript -->
   </body>
