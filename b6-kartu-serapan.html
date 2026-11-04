@@ -34,6 +34,29 @@
         border-top: 5px solid #0b4a8b;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       } /* Aksen biru dan bayangan */
+      .kartu.serapan {
+        border-top-color: #e5a50f;
+      } /* Tanpa spasi: hanya kartu yang punya dua class */
+      .label {
+        color: #5a6780;
+        font-size: 14px;
+      } /* Label kecil */
+      .nilai {
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 6px;
+      } /* Angka besar */
+      .ket {
+        font-size: 13px;
+        color: #137a6b;
+        margin-top: 4px;
+      } /* Keterangan kecil hijau */
+       @media (max-width: 600px) {
+        /* Aturan khusus layar <= 600 piksel */
+        .baris {
+          flex-direction: column;
+        } /* di ponsel kartu bertumpuk */
+      } /* Akhir media query */
     </style>
     <!-- Akhir CSS -->
   </head>
