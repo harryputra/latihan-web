@@ -55,8 +55,8 @@ $saldo = [
       <tr>
         <td><?= $bidang ?></td>
         <td class="n"><?= number_format($nilai, 0, ",", ".") ?></td>
-        <td class="<?= $kelas ?>"><?= $status ?></td>
-      </tr>
+        <td class="<?=  ?>"><?= $status ?></td>
+      </tr>$kelas
     <?php endforeach; ?>
   </table>
 </body>
