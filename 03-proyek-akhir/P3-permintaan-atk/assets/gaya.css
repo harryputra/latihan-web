@@ -1,0 +1,109 @@
+/* ==========================================================================
+   gaya.css — tampilan bersama seluruh halaman aplikasi
+   Cara membaca: bagian 1 berisi variabel warna, bagian berikutnya mengatur
+   kerangka halaman, kartu, tabel, formulir, tombol, lalu tampilan ponsel & cetak.
+   ========================================================================== */
+
+/* ---- 1. Variabel warna: ubah di sini untuk mengganti warna seluruh aplikasi ---- */
+:root {
+  --utama: #4a3f8f;        /* warna utama: ungu tua (judul, kepala tabel, tombol) */
+  --utama-muda: #ebe8f7;   /* versi lembut warna utama (latar sorotan) */
+  --aksen: #c99a2e;        /* warna aksen: emas (garis penanda) */
+  --teks: #1f2a44;         /* warna teks utama */
+  --redup: #6b7385;        /* teks keterangan yang tidak terlalu menonjol */
+  --garis: #d6e0ec;        /* warna garis tipis */
+  --latar: #f3f6fa;        /* latar halaman */
+  --hijau: #137a6b;        /* status baik / berhasil */
+  --kuning: #a86b00;       /* status perlu diperhatikan */
+  --merah: #b3261e;        /* status bahaya / galat */
+}
+
+/* ---- 2. Kerangka halaman ---- */
+* { box-sizing: border-box; }                                   /* lebar elemen sudah termasuk padding */
+body { margin: 0; font-family: "Segoe UI", Arial, sans-serif; color: var(--teks); background: var(--latar); font-size: 15px; }
+.kepala { background: var(--utama); color: #fff; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; border-bottom: 4px solid var(--aksen); }
+.merek { font-weight: 700; font-size: 18px; }                  /* nama aplikasi di kiri atas */
+.merek small { display: block; font-weight: 400; font-size: 12px; opacity: .8; }
+nav a { color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 6px; margin-left: 4px; }
+nav a:hover, nav a.aktif { background: rgba(255,255,255,.18); } /* menu yang sedang dibuka disorot */
+main { max-width: 1100px; margin: 24px auto; padding: 0 16px; }
+footer { text-align: center; color: var(--redup); font-size: 12px; padding: 24px; }
+h1 { font-size: 22px; color: var(--utama); margin: 0 0 4px; }
+h2 { font-size: 17px; color: var(--utama); margin: 0 0 12px; }
+.sub { color: var(--redup); margin: 0 0 18px; }                /* kalimat keterangan di bawah judul */
+.baris-judul { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+
+/* ---- 3. Kartu ringkasan dan panel ---- */
+.kartu-baris { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 18px; }
+.kartu { background: #fff; border-radius: 10px; padding: 16px; border-top: 4px solid var(--utama); box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+.kartu .label { font-size: 13px; color: var(--redup); }
+.kartu .nilai { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.kartu .ket { font-size: 12px; color: var(--redup); margin-top: 4px; }
+.kartu a, .panel a:not(.tombol) { color: var(--utama); font-weight: 600; }   /* tautan di kartu/panel mengikuti warna utama */
+.kartu.baik { border-top-color: var(--hijau); }
+.kartu.waspada { border-top-color: var(--kuning); }
+.kartu.bahaya { border-top-color: var(--merah); }
+.panel { background: #fff; border-radius: 10px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,.06); margin-bottom: 18px; }
+.dua-kolom { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+/* ---- 4. Tabel ---- */
+.tabel-wadah { overflow-x: auto; }                             /* tabel lebar dapat digeser di ponsel */
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th { background: var(--utama); color: #fff; text-align: left; padding: 9px 10px; font-weight: 600; font-size: 14px; }
+td { padding: 8px 10px; border-bottom: 1px solid var(--garis); vertical-align: top; }
+tr:nth-child(even) td { background: #f8fafd; }
+.n { text-align: right; white-space: nowrap; }                 /* angka rata kanan dan tidak terpotong */
+.total td { font-weight: 700; border-top: 2px solid var(--utama); background: var(--utama-muda) !important; }
+.kosong { text-align: center; color: var(--redup); padding: 24px; }
+
+/* ---- 5. Formulir ---- */
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px 18px; }
+.isian label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+.isian input, .isian select, .isian textarea { width: 100%; padding: 8px 10px; border: 1px solid #b9c6d6; border-radius: 6px; font: inherit; }
+.isian input:focus, .isian select:focus, .isian textarea:focus { outline: 2px solid var(--utama-muda); border-color: var(--utama); }
+.isian .bantuan, .pratinjau { display: block; font-size: 12px; color: var(--redup); margin-top: 3px; }
+.isian.salah input, .isian.salah select { border-color: var(--merah); } /* isian yang galat diberi garis merah */
+.filter { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+.filter .isian { min-width: 160px; }
+
+/* ---- 6. Tombol dan label status ---- */
+.tombol { display: inline-block; background: var(--utama); color: #fff; border: 0; padding: 9px 16px; border-radius: 6px; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; }
+.tombol:hover { filter: brightness(1.12); }
+.tombol.sekunder { background: #fff; color: var(--utama); border: 1px solid var(--utama); }
+.tombol.bahaya { background: var(--merah); }
+.tombol.hijau { background: var(--hijau); }
+.tombol.kecil { padding: 5px 10px; font-size: 13px; }
+.aksi { display: flex; gap: 6px; flex-wrap: wrap; align-items: flex-end; }
+.aksi form { margin: 0; }
+.lencana { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 12px; font-weight: 700; }
+.lencana.menunggu { background: #fff4d6; color: var(--kuning); }
+.lencana.setuju { background: #def2e6; color: var(--hijau); }
+.lencana.tolak { background: #fde6e7; color: var(--merah); }
+
+/* ---- 7. Pesan ---- */
+.pesan { padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; transition: opacity .6s; }
+.pesan.sukses { background: #def2e6; color: #0f5b3a; }
+.pesan.galat { background: #fde6e7; color: var(--merah); }
+.pesan ul { margin: 6px 0 0; padding-left: 20px; }
+.pesan.pudar { opacity: 0; }                                   /* dipakai app.js untuk memudarkan pesan */
+
+/* ---- 8. Batang porsi sederhana ---- */
+.batang { background: #e8eef6; border-radius: 6px; height: 10px; min-width: 80px; }
+.batang span { display: block; height: 100%; border-radius: 6px; background: var(--utama); }
+.batang span.waspada { background: var(--kuning); }
+.batang span.bahaya { background: var(--merah); }
+
+/* ---- 9. Tampilan ponsel (lebar layar 700 piksel ke bawah) ---- */
+@media (max-width: 700px) {
+  .dua-kolom { grid-template-columns: 1fr; }                   /* dua kolom menjadi satu */
+  nav a { margin: 0; padding: 6px 8px; }
+  .kartu .nilai { font-size: 20px; }
+}
+
+/* ---- 10. Tampilan cetak: menu, tombol, dan filter disembunyikan ---- */
+@media print {
+  .kepala nav, .tombol, .filter, footer, .tidak-dicetak { display: none !important; }
+  body { background: #fff; }
+  .panel, .kartu { box-shadow: none; border: 1px solid var(--garis); }
+  th { background: #ddd !important; color: #000; }
+}
