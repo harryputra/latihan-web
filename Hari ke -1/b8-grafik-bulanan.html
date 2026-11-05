@@ -8,7 +8,7 @@
     <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
     <title>Realisasi Bulanan</title>
     <!-- Judul tab -->
-    <script></script>
+    <script src="js/chart.umd.min.js"></script>
     <!-- Muat Chart.js -->
     <style>
       body {
@@ -35,9 +35,28 @@
         type: "line", // Jenis grafik: garis
         data: {
           // Awal data
-
-          // Label 10 bulan
-          datasets: [], // Akhir seri
+          labels: [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "Mei",
+            "Jun",
+            "Jul",
+            "Agu",
+            "Sep",
+            "Okt",
+          ], // Label 10 bulan
+          datasets: [
+            {
+              // Satu seri data
+              label: "Realisasi", // Nama seri
+              data: [78, 85, 92, 88, 95, 90, 97, 99, 101, 101], // Realisasi per bulan; jumlahnya 926
+              borderColor: "#e5a50f",
+              backgroundColor: "#e5a50f",
+              tension: 0.3, // Warna emas; tension 0.3 = garis melengkung
+            },
+          ], // Akhir seri
         }, // Akhir data
         options: {
           animation: false, // Pengaturan: tanpa animasi

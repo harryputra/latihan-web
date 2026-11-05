@@ -9,7 +9,7 @@
     <title>Grafik Anggaran per Bidang</title>
 
     <!-- Judul tab penambahan lokasi chart.umd.min.js -->
-    <script></script>
+    <script src="js/chart.umd.min.js"></script>
 
     <!-- Muat pustaka Chart.js dari folder js (tanpa internet) -->
     <style>
@@ -37,9 +37,26 @@
         type: "bar", // Jenis grafik: batang
         data: {
           // Awal data
-
-          // Label sumbu mendatar: 5 bidang
-          datasets: [], // Akhir daftar seri
+          labels: [
+            "Keuangan & Umum",
+            "SDM",
+            "Pelayanan",
+            "Jaringan",
+            "Konstruksi",
+          ], // Label sumbu mendatar: 5 bidang
+          datasets: [
+            // Daftar seri data
+            {
+              label: "Anggaran",
+              data: [180, 120, 240, 310, 260],
+              backgroundColor: "#c9d7ea",
+            }, // Seri 1: anggaran, warna abu-biru
+            {
+              label: "Realisasi",
+              data: [142, 101, 226, 248, 209],
+              backgroundColor: "#0b4a8b",
+            }, // Seri 2: realisasi, warna biru tua
+          ], // Akhir daftar seri
         }, // Akhir data
         options: { animation: false, scales: { y: { beginAtZero: true } } }, // Tanpa animasi; sumbu tegak mulai dari nol
       }); // Akhir pengaturan grafik
