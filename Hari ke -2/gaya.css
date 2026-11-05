@@ -1,0 +1,74 @@
+/* gaya.css — gaya bersama untuk halaman Blok 7 dan 8 */
+
+/* Gaya dasar seluruh halaman */
+body {
+  font-family: Arial, sans-serif;
+  color: #1f2a44;
+  margin: 24px;
+}
+
+h1 {
+  color: #0b4a8b;
+  font-size: 22px;
+}
+
+/* Tabel selebar halaman, garis menyatu */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background: #0b4a8b;
+  color: #fff;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+td {
+  padding: 7px 10px;
+  border-bottom: 1px solid #d6e0ec;
+}
+
+/* Baris genap berlatar lembut (zebra) */
+tr:nth-child(even) td {
+  background: #f2f7fc;
+}
+
+/* .n = angka rata kanan */
+.n {
+  text-align: right;
+}
+
+/* Baris total tebal */
+.total td {
+  font-weight: bold;
+  border-top: 2px solid #0b4a8b;
+}
+
+/* Kotak pesan berhasil (hijau) dan galat (merah) */
+.pesan {
+  padding: 10px;
+  border-radius: 8px;
+  background: #def2e6;
+  color: #0f5b3a;
+}
+
+.galat {
+  padding: 10px;
+  border-radius: 8px;
+  background: #fde6e7;
+  color: #b3261e;
+}
+
+/* Label sejajar 140 piksel + jarak isian */
+label {
+  display: inline-block;
+  width: 140px;
+}
+
+input,
+select {
+  padding: 5px;
+  margin: 3px 0;
+}
