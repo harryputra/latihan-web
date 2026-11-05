@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">
+  <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+  <head>
+    <!-- Awal bagian head (keterangan dokumen) -->
+    <meta charset="UTF-8" />
+    <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+    <title>Grafik Anggaran per Bidang</title>
+
+    <!-- Judul tab penambahan lokasi chart.umd.min.js -->
+    <script></script>
+
+    <!-- Muat pustaka Chart.js dari folder js (tanpa internet) -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+      }
+      .wadah {
+        max-width: 760px;
+      }
+    </style>
+    <!-- Gaya halaman; grafik maksimal 760 piksel -->
+  </head>
+  <!-- Akhir head -->
+  <body>
+    <!-- Awal body -->
+    <h2>Anggaran vs Realisasi per Bidang (Rp juta)</h2>
+    <!-- Judul grafik dengan satuan -->
+    <div class="wadah"><canvas id="grafik"></canvas></div>
+    <!-- canvas = kanvas tempat grafik digambar -->
+    <script>
+      // Awal JavaScript
+      new Chart(document.getElementById("grafik"), {
+        // Buat grafik baru di canvas id=grafik
+        type: "bar", // Jenis grafik: batang
+        data: {
+          // Awal data
+
+          // Label sumbu mendatar: 5 bidang
+          datasets: [], // Akhir daftar seri
+        }, // Akhir data
+        options: { animation: false, scales: { y: { beginAtZero: true } } }, // Tanpa animasi; sumbu tegak mulai dari nol
+      }); // Akhir pengaturan grafik
+    </script>
+    <!-- Akhir JavaScript -->
+  </body>
+  <!-- Akhir body -->
+</html>
+<!-- Akhir dokumen -->

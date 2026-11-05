@@ -1,0 +1,54 @@
+<!doctype html>
+<!-- Deklarasi: dokumen ini memakai HTML5 -->
+<html lang="id">
+  <!-- Awal dokumen; lang=id = berbahasa Indonesia -->
+  <head>
+    <!-- Awal bagian head (keterangan dokumen) -->
+    <meta charset="UTF-8" />
+    <!-- Pengodean UTF-8 agar huruf & simbol tampil benar -->
+    <title>Realisasi Bulanan</title>
+    <!-- Judul tab -->
+    <script></script>
+    <!-- Muat Chart.js -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 24px;
+      }
+      .wadah {
+        max-width: 760px;
+      }
+    </style>
+    <!-- Gaya halaman -->
+  </head>
+  <!-- Akhir head -->
+  <body>
+    <!-- Awal body -->
+    <h2>Realisasi Biaya Operasional per Bulan 2026 (Rp juta)</h2>
+    <!-- Judul grafik -->
+    <div class="wadah"><canvas id="grafik"></canvas></div>
+    <!-- Kanvas grafik -->
+    <script>
+      // Awal JavaScript
+      new Chart(document.getElementById("grafik"), {
+        // Buat grafik baru
+        type: "line", // Jenis grafik: garis
+        data: {
+          // Awal data
+
+          // Label 10 bulan
+          datasets: [], // Akhir seri
+        }, // Akhir data
+        options: {
+          animation: false, // Pengaturan: tanpa animasi
+          plugins: {
+            title: { display: true, text: "Total s.d. Oktober: Rp 926 juta" },
+          },
+        }, // Judul di atas grafik
+      }); // Akhir pengaturan
+    </script>
+    <!-- Akhir JavaScript -->
+  </body>
+  <!-- Akhir body -->
+</html>
+<!-- Akhir dokumen -->
